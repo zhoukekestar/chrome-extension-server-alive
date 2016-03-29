@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>配置</title>
+	<style>
+	body{
+		margin: 0;
+		padding: 1em;
+	}
+	</style>
+</head>
+<body>
+	<input type='text'/>
+	<button>保存</button>
+	<script>
+		var input = document.querySelector('input');
+		var btn  = document.querySelector('button');
+
+		input.value = localStorage.getItem('url') || '';
+		btn.onclick = function() {
+			localStorage.setItem('url', input.value)
+		}
+	</script>
+
+
+</body>
+</html>
