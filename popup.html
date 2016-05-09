@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>toomao</title>
+    <style>
+      button {
+        width: 11em;
+        display: block;
+        padding: 8px 0;
+        border-radius: 5px;
+        border: none;
+        background-color: rgba(73,160,237,0.8);
+        color: #fff;
+        font-size: 12px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgba(73,160,237,1);
+      }
+    </style>
+
+  </head>
+  <body>
+    <button data-run='switchToLocal();' style='margin-bottom: 15px;'>切换至开发环境</button>
+    <button data-run='switchToDev();'>切换至测试环境</button>
+    <script src='popup.js'></script>
+  </body>
+</html>
