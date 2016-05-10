@@ -23,8 +23,19 @@ var autoRun = function() {
 }
 
 function buttonClick() {
-  var code = '!(' + autoRun.toString() + ')();' + (this.dataset.run || "");
-  chrome.tabs.executeScript(null, {code: code});
+
+  if (this.dataset.inject) {
+
+    var code = '!(' + autoRun.toString() + ')();' + (this.dataset.inject || "");
+    chrome.tabs.executeScript(null, {code: code});
+
+  } else if (this.dataset.openTab) {
+
+    chrome.tabs.create({url: this.dataset.openTab, selected: true})
+
+  } else {
+
+  }
 }
 
 document.body.addEventListener('click', function(e) {

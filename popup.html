@@ -18,12 +18,17 @@
       button:hover {
         background-color: rgba(73,160,237,1);
       }
+      button + button {
+        margin-top: 15px;
+      }
     </style>
 
   </head>
   <body>
-    <button data-run='switchToLocal();' style='margin-bottom: 15px;'>切换至开发环境</button>
-    <button data-run='switchToDev();'>切换至测试环境</button>
+    <button data-inject='switchToLocal();'>切换至开发环境</button>
+    <button data-inject='switchToDev();'>切换至测试环境</button>
+    <button data-inject="location.href = '/square'">广场</button>
+    <button data-open-tab="https://dev-common.toomao.com/webcoms">组件开发</button>
     <script src='popup.js'></script>
   </body>
 </html>
